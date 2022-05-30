@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ScriptVersion 1.0.0 -->
+<Deployment>
+	<!-- Software Informations -->
+	<appVendor></appVendor>
+	<appName></appName>
+	<appDisplayname></appDisplayname>
+	<appVersion></appVersion>
+	<appArch></appArch>
+	<appLang>ENG</appLang>
+	<appRevision>01</appRevision>	
+		
+	<appVersionMajor>1</appVersionMajor>				<!-- Sample: 1 -->
+	<appVersionMinor>0</appVersionMinor>				<!-- Sample: 0 -->
+	<appVersionPatchLevel>0</appVersionPatchLevel>  	<!-- Sample: 0 -->
+	<appVersionBuildNumber>0</appVersionBuildNumber>	<!-- Sample: 0 -->
+
+	<!-- Set global options -->
+	<globalInstallOption></globalInstallOption>
+	<globalUninstallOption></globalUninstallOption>
+	
+	<ProcessKill></ProcessKill>
+	
+	<!-- MSI will be removed at install and uninstall -->
+	<ProductCodes></ProductCodes>	
+	
+</Deployment>	
+
+    <!-- 
+	<Install UnInstall>
+        <Type>msi</Type>
+        <msi>.\XX.msi</msi>
+        <mst>.\XX.mst</mst>
+		<msp>.\XX.msp</msp>
+		<Properties>/QN</Properties>
+        <AllowedReturnCodes>0</AllowedReturnCodes>
+        <AllowedReturnCodesReboot>3010</AllowedReturnCodesReboot>
+    </Install UnInstall> 
+ 
+	<Install UnInstall>
+		<Type>exe</Type>	   
+		<Exe>.\setup.exe</Exe>	      
+		<Arguments>/s /log:%LOGFILE%</Arguments>
+		<AllowedReturnCodes>0</AllowedReturnCodes>
+		<AllowedReturnCodesReboot>3010</AllowedReturnCodesReboot>     
+	</Install UnInstall> 
+   
+	<Install UnInstall>
+		<Type>ps1</Type>	   
+		<Ps1>.\DeploymentScript.ps1</Ps1>	      
+		<Arguments>Install UnInstall</Arguments>
+		<AllowedReturnCodes>0</AllowedReturnCodes>	      
+		<AllowedReturnCodesReboot>3010</AllowedReturnCodesReboot>     
+	</Install UnInstall>   
+   -->

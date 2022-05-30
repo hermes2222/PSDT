@@ -1,0 +1,31 @@
+cls
+
+function Write-Log ($counter,$entry)
+{    
+    $appLockerAdd = @{
+        Message = "[KOST-VAL][Add HashRule(s)][Office]`n" +
+                  $entry.ForEach({$_ + "`n"})
+        EventId = '8101'
+    }
+
+    ($appLockerAdd.message | Measure-Object -Character).Characters
+    Write-EventLog -LogName PKG-Applications -Source 'PKG-AppLocker' -EntryType Information @appLockerAdd
+}
+
+$test = gc C:\Packages\applocker\files.txt -raw
+
+$counter = 0
+$entry = @()
+
+foreach ($row in ($test -split '\n')){
+    if ($counter + ($row | Measure-Object -Character).Characters -lt 30000){
+        $counter += ($row | Measure-Object -Character).Characters
+        $entry += $row
+    } else { 
+        Write-Log $counter $entry
+        $counter = 0 
+        $entry = @()
+    }
+}
+
+Write-Log $counter $entry
